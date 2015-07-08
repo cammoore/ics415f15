@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Local Storage</title>
+
+</head>
+
+<body>
+<div id="result"></div>
+</body>
+<script>
+  if (typeof(Storage) !== "undefined") {
+    // Yes! localStorage and sessionStorage support!
+    alert("Have localStorage");
+    localStorage.lastname = "Moore";
+    document.getElementById("result").innerHTML = "Last name: "
+        + localStorage.lastname;
+    console.log(localStorage.lastname);
+  }
+  else {
+    // Sorry! No web storage support..
+    alert("Don't have localStorage");
+  }
+</script>
+</html>
